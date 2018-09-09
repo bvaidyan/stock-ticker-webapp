@@ -1,0 +1,31 @@
+<!doctype html>
+<title>Stock App</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_ticker.css')}}'>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{GANALYTICS_TRACK_ID}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{GANALYTICS_TRACK_ID}}');
+</script>
+
+<div class=page>
+  <h1>Stock App</h1>
+  <div class=metanav>
+    <h4>
+      Specify stock name
+    </h4>
+
+    <form id='userinfoform' method='post' action='index' >
+      <p>
+    Name: <input type='text' name='stock_name' />
+      </p>
+      <p>
+    <input type='submit' value='Submit' />
+      </p>
+    </form>
+
+  </div>
+</div>
